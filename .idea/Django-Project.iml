@@ -5,6 +5,7 @@
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="module" module-name="git_test" />
+    <orderEntry type="module" module-name="MS-4-ToyProblems" />
   </component>
   <component name="TemplatesService">
     <option name="TEMPLATE_FOLDERS">

@@ -12,3 +12,17 @@ class Student(models.Model): #Check out the model fields available
 
     def __str__(self):
         return self.full_name
+
+
+class Classroom (models.Model):
+    name = models.CharField(max_length=200)
+    floor = models.IntegerField()
+    has_podium = models.BooleanField()
+    commissioned_date = models.DateField(auto_now=False, auto_now_add=True)
+    created_at = models.DateField(auto_now=False, auto_now_add=True)
+    updated_at = models.DateField(auto_now=True, auto_now_add=False)
+
+
+    def __str__(self):
+        return self.name
+
