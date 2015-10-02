@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="677b9f83-0d4c-412a-9da3-9f9536fa6b0b" name="Default" comment="">
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../git_test/test.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mysite/marcador/models.py" afterPath="$PROJECT_DIR$/mysite/marcador/models.py" />
     </list>
     <ignored path="Django-Project.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -26,12 +26,24 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="settings.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="settings.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/mysite/mysite/settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.54382825">
-              <caret line="34" column="26" selection-start-line="34" selection-start-column="26" selection-end-line="34" selection-end-column="26" />
+            <state vertical-scroll-proportion="-6.814815">
+              <caret line="35" column="34" selection-start-line="35" selection-start-column="34" selection-end-line="35" selection-end-column="34" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="models.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/mysite/marcador/models.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.8191126">
+              <caret line="32" column="26" selection-start-line="32" selection-start-column="26" selection-end-line="32" selection-end-column="26" />
+              <folding>
+                <element signature="e#151#194#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -57,6 +69,7 @@
         <option value="$USER_HOME$/Desktop/Projects/Toy Problems/MS-4-ToyProblems/paren_matcher/.idea/workspace.xml" />
         <option value="$USER_HOME$/Desktop/Projects/Toy Problems/MS-4-ToyProblems/capitalize_python/capitalize.py" />
         <option value="$PROJECT_DIR$/mysite/mysite/settings.py" />
+        <option value="$PROJECT_DIR$/mysite/marcador/models.py" />
       </list>
     </option>
   </component>
@@ -581,9 +594,19 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/mysite/mysite/settings.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.54382825">
-          <caret line="34" column="26" selection-start-line="34" selection-start-column="26" selection-end-line="34" selection-end-column="26" />
+        <state vertical-scroll-proportion="-6.814815">
+          <caret line="35" column="34" selection-start-line="35" selection-start-column="34" selection-end-line="35" selection-end-column="34" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mysite/marcador/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.8191126">
+          <caret line="32" column="26" selection-start-line="32" selection-start-column="26" selection-end-line="32" selection-end-column="26" />
+          <folding>
+            <element signature="e#151#194#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
