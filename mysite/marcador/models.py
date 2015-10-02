@@ -38,9 +38,9 @@ class PublicBookmarkManager(models.Model):
 @python_2_unicode_compatible
 class Bookmark (models.Model):
     url = models.URLField()
-    title = models.CharField('title', max_lenth=255)
-    description = models.TextField('description' blank=True)
-    is_public = models.BooleanField('public', defult=True)
+    title = models.CharField('title', max_length=255)
+    description = models.TextField('description', blank=True)
+    is_public = models.BooleanField('public', default=True)
     date_created = models.DateTimeField('date created')
     date_updated = models.DateTimeField('date updated')
     owner = models.ForeignKey(User, verbose_name='owner', related_name='bookmarks')
@@ -55,10 +55,10 @@ class Bookmark (models.Model):
         verbose_name_plural = 'bookmarks'
         ordering = ['-date_created'] # why the '-' before date-created????
 
-        def __str__(self):
+    def __str__(self):
             return '%s (%s)' % (self.title, self.url)
 
-        def save(self, *args, **kwargs):
+    def save(self, *args, **kwargs):
             if not self.id:
                 self.date_created = now()
             self.date_updated = now()

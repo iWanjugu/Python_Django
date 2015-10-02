@@ -1,6 +1,6 @@
 from django.contrib import admin
-from .models import Student
-from .models import Classroom
+from .models import Student, Classroom
+# from .models import Classroom
 
 
 # Register your models here.
