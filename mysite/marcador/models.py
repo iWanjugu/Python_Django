@@ -30,22 +30,22 @@ class Tag(models.Model):
 
 
 ######## Additional Manager that returns public bookmarks only for the mode 'Bookmark'
-class PublicBookmarkManager(models.Model):
+class PublicBookmarkManager(models.Manager):
     def get_queryset(self):
-        qs = super(PublicBookmarkManager, self).get_query
-        return qs.filer(is_public=True)
+        qs = super(PublicBookmarkManager, self).get_queryset()
+        return qs.filter(is_public=True)
 
 @python_2_unicode_compatible
-class Bookmark (models.Model):
+class Bookmark(models.Model):
     url = models.URLField()
     title = models.CharField('title', max_length=255)
     description = models.TextField('description', blank=True)
     is_public = models.BooleanField('public', default=True)
     date_created = models.DateTimeField('date created')
     date_updated = models.DateTimeField('date updated')
-    owner = models.ForeignKey(User, verbose_name='owner', related_name='bookmarks')
+    owner = models.ForeignKey(User, verbose_name='owner',
+        related_name='bookmarks')
     tags = models.ManyToManyField(Tag, blank=True)
-
 
     objects = models.Manager()
     public = PublicBookmarkManager()
@@ -53,13 +53,13 @@ class Bookmark (models.Model):
     class Meta:
         verbose_name = 'bookmark'
         verbose_name_plural = 'bookmarks'
-        ordering = ['-date_created'] # why the '-' before date-created????
+        ordering = ['-date_created']
 
     def __str__(self):
-            return '%s (%s)' % (self.title, self.url)
+        return '%s (%s)' % (self.title, self.url)
 
     def save(self, *args, **kwargs):
-            if not self.id:
-                self.date_created = now()
-            self.date_updated = now()
-            super(Bookmark, self).save(*args, **kwargs)
+        if not self.id:
+            self.date_created = now()
+        self.date_updated = now()
+        super(Bookmark, self).save(*args, **kwargs)
