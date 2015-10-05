@@ -5,5 +5,10 @@ from django.http import HttpResponse
 
 
 def index(request):
-    return render(request, 'index.html' ,{})
+    #for a dynamic homepage add the 'context' variable
+    context = {
+        "hello_message" : "Hello Moringa"
+
+    }
+    return render(request, 'index.html' ,context) #substitute {} with 'context'
 #    return HttpResponse("Success")
