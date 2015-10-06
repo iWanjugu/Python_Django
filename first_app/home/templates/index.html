@@ -1,8 +1,15 @@
 <html>
 
-<p>Hello World! Si Django is complicated</p>
+{#<p>Hello World! Si Django is complicated</p>#}
 <p>{{ hello_message }}</p>
-<p>{{ request }}</p>
+<!-- <p>{{ request }}</p> -->
 
+<form action="" method="post" accept-charset="utf-8">
+{% csrf_token %}
+
+{{ form.as_p }}<!-- as_p = displaying as a form as a paragraph--->
+    <p><input type="submit" value="Register"></p> <!-- adding the submit button -->
+
+</form>
 
 </html>
