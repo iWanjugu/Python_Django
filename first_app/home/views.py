@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from .forms import StudentForm
 from .forms import FeedbackForm
+from django.core.mail import send_mail
 
 # from django.http import HttpResponse
 
@@ -45,8 +46,16 @@ def index(request):
 def feedback(request):
     form = FeedbackForm(request.POST or None)
     if form.is_valid():
-        for key, value in form.cleaned_data.items():
-            print(key, value)
+        # for key, value in form.cleaned_data.items():
+        #     print(key, value)
+
+        #to send email if form is valid
+        from_email = form.cleaned_data.get('email')
+        full_name = form.cleaned_data.get('full_name')
+        message = form.cleaned_data.get('message')
+        prepared_message = "You have feedback from {} saying'{}'".format(full_name, message)
+        send_mail('New Feedback Given', prepared_message, from_email,
+    ['i.wanjugu@yaoo.com'], fail_silently=False)
     context= {
         "form": form
     }

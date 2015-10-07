@@ -27,6 +27,12 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
+EMAIL_HOST = 'smtp.mandrillapp.com'
+EMAIL_HOST_USER = 'i.wanjugu@yahoo.com'
+EMAIL_HOST_PASSWORD = 'oNAjp4gJlI4KRhM6OyalQA'
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
+
 
 # Application definition
 
