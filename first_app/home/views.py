@@ -1,5 +1,7 @@
 from django.shortcuts import render
 from .forms import StudentForm
+from .forms import FeedbackForm
+
 # from django.http import HttpResponse
 
 # Create your views here.
@@ -36,5 +38,16 @@ def index(request):
             }
 
 
-    return render(request, 'index.html' ,context) #substitute {} with 'context'
+    return render(request, 'index.html', context) #substitute {} with 'context'
 #    return HttpResponse("Success")
+
+
+def feedback(request):
+    form = FeedbackForm(request.POST or None)
+    if form.is_valid():
+        for key, value in form.cleaned_data.items():
+            print(key, value)
+    context= {
+        "form": form
+    }
+    return render(request, 'feedback.html', context)
