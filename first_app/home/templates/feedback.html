@@ -1,0 +1,11 @@
+<html>
+
+<form action="" method="post" accept-charset="utf-8">
+{% csrf_token %}
+
+{{ form.as_p }}<!-- as_p = displaying as a form as a paragraph--->
+    <p><input type="submit" value="Give Feedback"></p> <!-- adding the submit button -->
+
+</form>
+
+</html>
