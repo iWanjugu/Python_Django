@@ -55,7 +55,7 @@ def feedback(request):
         message = form.cleaned_data.get('message')
         prepared_message = "You have feedback from {} saying'{}'".format(full_name, message)
         send_mail('New Feedback Given', prepared_message, from_email,
-    ['i.wanjugu@yaoo.com'], fail_silently=False)
+    ['i.wanjugu@yahoo.com'], fail_silently=False)
     context= {
         "form": form
     }
