@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from .forms import StudentForm
 from .forms import FeedbackForm
+from .models import Student
 from django.core.mail import send_mail
 
 # from django.http import HttpResponse
@@ -60,3 +61,9 @@ def feedback(request):
         "form": form
     }
     return render(request, 'feedback.html', context)
+
+
+def students(request):
+    students = Student.objects.all # All the objects
+    context = {'students':students}
+    return render(request, 'students.html', context)
