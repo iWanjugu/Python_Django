@@ -29,8 +29,32 @@
 
     <!--- Body Content ---->
 <div id="body" class="container">
-    <div class ="row"
-        <p> {{students}} </p> <!-- calling the things you want to diaplay here --->
+    <div class ="row">
+        <!-- making this information pretty (in a table) -->
+        <!-- Using 'for' loop -->
+        {% for student in students %}
+        {{student.full_name}} <!-- calling the things you want to display here --->
+        {% endfor %}
+        
+        <table class="table">
+            <tr>
+                <th>Fullname</th>
+                <th> Age </th>
+                <th> Email </th>
+                <th> Interests</th>
+            </tr>
+            
+            <tr>
+            {% for student in students %} <!-- Looping the details within each category-->
+            <tr>                
+                <td>{{student.full_name}}</td> <!-- calling the things you want to display here --->                
+                <td>{{student.age}}</td>
+                <td>{{student.email}}</td>
+                <td>{{student.interests}}</td>
+                
+            {% endfor %}
+        
+        </table>
     </div>
 </div>
 </body>
