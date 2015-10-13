@@ -32,25 +32,32 @@
     <div class ="row">
         <!-- making this information pretty (in a table) -->
         <!-- Using 'for' loop -->
-        {% for student in students %}
-        {{student.full_name}} <!-- calling the things you want to display here --->
-        {% endfor %}
         
+        <!-- Display in line
+        {% for student in students %}
+        {{student.full_name}}  calling the things you want to display here -
+        {% endfor %}
+        -->
+        
+        <!-- Display in table -->
         <table class="table">
             <tr>
-                <th>Fullname</th>
+                <th></th> <!-- For Counter field -->
+                <th> Fullname </th>
                 <th> Age </th>
                 <th> Email </th>
-                <th> Interests</th>
+                <th> Interests </th>
+                <th> Last updated </th>
             </tr>
-            
-            <tr>
+
             {% for student in students %} <!-- Looping the details within each category-->
-            <tr>                
+            <tr>                 
+                <td>{{forloop.counter}}</td><!-- adding numbering -->
                 <td>{{student.full_name}}</td> <!-- calling the things you want to display here --->                
                 <td>{{student.age}}</td>
                 <td>{{student.email}}</td>
                 <td>{{student.interests}}</td>
+                <td>{{student.last_update | timesince}}</td> <!--filter called 'timesince' -->
                 
             {% endfor %}
         
