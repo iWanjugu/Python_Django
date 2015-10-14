@@ -22,6 +22,7 @@ urlpatterns = [
     url(r'^$', 'home.views.index', name='home'),
     url(r'^feedback/$', 'home.views.feedback', name='feedback'),
     url(r'^students/$', 'home.views.students', name='students'),
+    url(r'^accounts/', include('registration.backends.default.urls')),
     url(r'^admin/', include(admin.site.urls)),
 ]
 
