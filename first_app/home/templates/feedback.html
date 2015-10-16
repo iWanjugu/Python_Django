@@ -1,11 +1,13 @@
 {% extends "base.html" %}
-{% block content %}
+{%block contact_active %}
+class="active"
+{% endblock %}
 
+{% block content %}
 <form action="" method="post" accept-charset="utf-8">
 {% csrf_token %}
 
 {{ form.as_p }}<!-- as_p = displaying as a form as a paragraph--->
-    <p><input type="submit" value="Give Feedback"></p> <!-- adding the submit button -->
+    <p><input id="feedback" type="submit" value="Give Feedback"></p> <!-- adding the submit button -->
 </form>
-
 {% endblock %}

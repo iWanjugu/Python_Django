@@ -1,4 +1,7 @@
 {% extends "base.html" %}
+{%block students_active %}
+class="active"
+{% endblock %} <!--doesn't matter where you place it as long as it's after the 'extends' tag -->
 {% block content %}
         <p> Welcome {{request.user}}!</p>
 
