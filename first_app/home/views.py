@@ -10,6 +10,10 @@ from django.core.mail import send_mail
 
 
 def index(request):
+    context = {}
+    return render(request, 'home.html', context)
+
+def register(request):
     #for a dynamic homepage add the 'context' variable
     # form = StudentForm()
     # print (request.POST) #prints ut on the terminal(server) what has been POSTed
