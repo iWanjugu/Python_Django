@@ -38,3 +38,7 @@ nav .container-fluid {
 input, textarea {
     width: 400px;
 }
+
+label {
+    width: 75px;
+}
